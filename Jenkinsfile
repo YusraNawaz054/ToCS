@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build'){
             steps{
-                bat 'Text Document practice.txt'
+                bat 'Txt practice.txt'
 
                 }
             }
