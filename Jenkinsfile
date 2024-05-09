@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build'){
             steps{
-                bat 'python MyWorld.py'
+                bat 'Text Document practice.txt'
 
                 }
             }
