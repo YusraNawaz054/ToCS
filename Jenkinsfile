@@ -12,7 +12,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone GitHub repository
-                git ''
+                git 'https://github.com/YusraNawaz054/ToCS.git'
             }
         }
 
