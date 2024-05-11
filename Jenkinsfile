@@ -21,7 +21,7 @@ pipeline {
         stage('Build Python File') {
             steps {
                 
-                sh 'MyWorld.py'
+                bat 'MyWorld.py'
             }
         }
     }
