@@ -2,27 +2,20 @@ pipeline {
     agent any
     
     stages {
-        stage('Remove Old Clone') {
+        stage('Delete Old Cloned Repository') {
             steps {
-                // Delete the old cloned repository
-                script {
-                    sh 'rm -rf C:/Windows/System32/ToCS'
-                }
+                deleteDir()
             }
         }
-        
         stage('Clone Repository') {
             steps {
-                
-                git 'https://github.com/YusraNawaz054/ToCS.git'
+                git branch: 'main', url: 'https://github.com/YusraNawaz054/ToCS.git'
             }
         }
-        
-        stage('Build Python File') {
-            steps {
-                
+        stage('Build') {
+            steps { 
                 bat 'MyWorld.py'
             }
-        }
-    }
+        }
+    }
 }
